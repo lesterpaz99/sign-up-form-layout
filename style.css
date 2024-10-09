@@ -1,3 +1,87 @@
-p {
-  color: red;
+/*
+.main => block
+.main_image => element
+.main--small => modifier
+.main_image--dark => modifier
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Norse Bold';
+  src: url(./fonts/Norse-Bold.otf);
+}
+
+:root {
+  --primary-btn-color: #596D48;
+  --light-border-color: ##E5E7EB;
+  --heading-color: white;
+  --text-color: #040404;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.aside {
+  position: relative;
+  width: 535px;
+  background-image: url(./img/halie-west-25xggax4bSA-unsplash-min.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.aside_logo_container {
+  background-color: rgb(0, 0, 0, 0.5);
+  margin-top: 160px;
+  padding: 12px;
+  color: var(--heading-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside_logo {
+  width: 96px;
+}
+
+.aside_footer {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.aside_title {
+  font-family: 'Norse Bold';
+  font-size: 6.5rem;
+  margin-top: 26px;
+}
+
+.main {
+  width: calc(100% - 535px);
 }
