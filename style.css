@@ -18,7 +18,7 @@
 
 :root {
   --primary-btn-color: #596D48;
-  --light-border-color: ##E5E7EB;
+  --light-border-color: #E5E7EB;
   --heading-color: white;
   --text-color: #040404;
 }
@@ -84,4 +84,78 @@ a {
 
 .main {
   width: calc(100% - 535px);
+  display: grid;
+  align-content: center;
+}
+
+.content_wrapper {
+  color: var(--text-color);
+  padding-left: 50px;
+}
+
+.main_text {
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.form_wrapper {
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+  padding: 24px 50px;
+  margin-bottom: 40px;
+}
+
+.fields_container {
+  display: grid;
+  grid-template-columns: repeat(2, 280px);
+  grid-template-rows: repeat(3, auto);
+  gap: 18px 50px;
+}
+
+label {
+  margin-bottom: 4px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+input {
+  padding: 4px 12px;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid var(--light-border-color);
+}
+
+input:focus {
+  border: 2px solid rgb(55, 87, 233);
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+}
+
+input:invalid {
+  border: 1px solid rgb(233, 55, 61);
+}
+
+label[data-set="required"]::after {
+  content: '*';
+  color: rgb(233, 55, 61);
+}
+
+.form_button {
+  background-color: var(--primary-btn-color);
+  border-radius: 8px;
+  padding: 12px 32px;
+  margin-bottom: 26px;
+  color: var(--heading-color);
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.2);
+  border: none;
+}
+
+.form_link {
+  color: var(--primary-btn-color);
+  font-weight: bold;
+  text-decoration: none;
 }
